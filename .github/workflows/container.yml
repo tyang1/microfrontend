@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: rm yarn.lock
       - run: yarn install --registry=https://registry.npmjs.org
       - run: yarn build
       - uses: shinyinc/action-aws-cli@v1.2
